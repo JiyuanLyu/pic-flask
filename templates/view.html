@@ -1,0 +1,19 @@
+# This template is for user to
+# view the message in the database
+
+
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Ask{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  {% for m in messages %}
+  <br>
+  <b>{{m.0}}</b>
+  <br>
+  <i>{{m.1}}</i>
+  <br>
+  {% endfor %}
+{% endblock %}
